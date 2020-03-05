@@ -13,7 +13,7 @@ public class Team {
     String defender;
 
     public Team(String teamName, String[] memberNames){
-        System.out.println("Mathias T COMMIT TEST IF YOU SEE THIS IT WAS A SUCCESS v2");
+        System.out.println("Mathias T COMMIT & PUSH TEST IF YOU SEE THIS IT WAS A SUCCESS v2");
         this.id = nextId;
         name = teamName;
         nextId++;
