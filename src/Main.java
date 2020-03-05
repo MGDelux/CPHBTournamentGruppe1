@@ -7,5 +7,7 @@ public class Main {
         Team team1 = new Team ("Golden Eagles", new String[]{"Ali","Mathias"});
         System.out.println(team1);
         System.out.println("Emil Westergård ");
+        System.out.println("Ali");
     }
 }
+
