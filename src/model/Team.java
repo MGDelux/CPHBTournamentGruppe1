@@ -11,9 +11,9 @@ public class Team {
     private ArrayList<Player> players = new ArrayList<Player>();
     String attacker;
     String defender;
-
     public Team(String teamName, String[] memberNames){
         this.id = nextId;
+
         name = teamName;
         nextId++;
         //attacker = players[0];

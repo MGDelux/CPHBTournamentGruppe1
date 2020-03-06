@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Match {
 
-    private Team time1, time2;
+    private Team team1, team2;
     private String result, type;
     private LocalDateTime time;
     private int id;
@@ -16,12 +16,12 @@ public class Match {
         nextId++;
     }
 
-    public Team getTime1() {
-        return time1;
+    public Team getTeam1() {
+        return team1;
     }
 
-    public Team getTime2() {
-        return time2;
+    public Team getTeam2() {
+        return team2;
     }
 
     public String getResult() {
@@ -41,12 +41,12 @@ public class Match {
     }
 
 
-    public void setTime1(Team time1) {
-        this.time1 = time1;
+    public void setTeam1(Team time1) {
+        this.team1 = team1;
     }
 
-    public void setTime2(Team time2) {
-        this.time2 = time2;
+    public void setTeam2(Team time2) {
+        this.team2 = team2;
     }
 
     public void setResult(String result) {
