@@ -15,6 +15,16 @@ public class Match {
         this.id = Match.nextId;
         nextId++;
     }
+    public LocalDateTime SetTime(LocalDateTime matchDate){
+        time = matchDate;
+        return time;
+
+    }
+    public void setTeam(Team team1,Team team2){
+        this.team1 = team1;
+       this.team2 = team2;
+    }
+
 
     public Team getTeam1() {
         return team1;
@@ -40,12 +50,14 @@ public class Match {
         return score;
     }
 
-
-    public void setTeam1(Team time1) {
+  public int returnId(){
+        return id;
+}
+    public void setTeam1(Team team1) {
         this.team1 = team1;
     }
 
-    public void setTeam2(Team time2) {
+    public void setTeam2(Team team2) {
         this.team2 = team2;
     }
 

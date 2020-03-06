@@ -14,7 +14,7 @@ public class Team {
     public Team(String teamName, String[] memberNames){
         this.id = nextId;
 
-        name = teamName;
+        this.name = teamName;
         nextId++;
         //attacker = players[0];
         //defender = players[1];
