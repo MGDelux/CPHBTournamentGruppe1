@@ -12,12 +12,20 @@ public class Main {
       //  Team team1 = new Team("Golden Eagles", new String[]{"Ali", "Mathias"});
         //System.out.println(team1);
         registerTeam(teamName,teamMembers);
+        displayTeams();
+    }
+
+    private static void displayTeams() {
+        for (Team team : teams ){  //Team Datatypen gir vi navn og instanser den 'team' printer vi fra 'teams' array.  AKA Team(Datatype) team(var navn) : (for) teams(ArrayList navn)
+            System.out.println(team); //print team
+        }
     }
 
     private static void registerTeam(String teamName,String[] teammembers) { //
             Team newTeam = new Team(teamName, teammembers);
-            System.out.println(newTeam); // Sout nyeste team
+           // System.out.println(newTeam); // Sout nyeste team
             teams.add(newTeam); //Tilføjer team til vores main team arraylist.
     }
+
 }
 
