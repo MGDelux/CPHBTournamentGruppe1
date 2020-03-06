@@ -20,7 +20,10 @@ public class Match {
 
     }
     @Override
-    public String toString() { // SKAL FORMATERES
+    public String toString() { // SKAL FORMATERES og fixes lol
+        if(this.team1 !=null && this.team2 != null){
+            System.out.println("Error?");
+        }
         return "Match{" +
                 ", Match id= " + id +
                 " team1: " + team1 +

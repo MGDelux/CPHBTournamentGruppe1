@@ -12,11 +12,17 @@ public class Main {
         String teamName = "Golden memers"; // FAKE UI INPUT
         String[] teamMembers = {"Ali","Mathias"}; // FAKE UI INPUT
         String teamName2 = "EZPZ";
-        String[] teamMembers2 ={"Emil,Janus"};
+        String[] teamMembers2 ={"Emil","Janus"};
+        String teamName3 = "Ali er gud";
+        String[] teamMember3={"Tess","Thor"};
+        String teamName4 = "IJ ER S!ck";
+        String[] teamMembers4= {"Jens","Mqens"};
       //  Team team1 = new Team("Golden Eagles", new String[]{"Ali", "Mathias"});
         //System.out.println(team1);
         Team team1 = registerTeam(teamName,teamMembers);
         Team team2 = registerTeam(teamName2,teamMembers2);
+        Team team3 = registerTeam(teamName3,teamMember3);
+        Team team4 = registerTeam(teamName4,teamMembers4);
         displayTeams();
         int match1 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
         int match2 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
