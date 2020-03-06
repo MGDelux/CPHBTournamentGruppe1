@@ -1,6 +1,5 @@
 import model.Match;
 import model.Team;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -20,23 +19,27 @@ public class Main {
         Team team2 = registerTeam(teamName2,teamMembers2);
         displayTeams();
         int match1 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
-        getMatchById(match1).setTeam(team1,team2);
-
+        int match2 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
+        int match3 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
+        int semif1 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
+        int semif2 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
+        updateMatch(match1,team1,team2);
+        System.out.println(getMatchById(match1)); // for testing
     }
-
+    private static void updateMatch(int m,Team team1,Team team2) {
+        Match match = getMatchById(m);
+        match.setTeam(team1,team2);
+    }
     private static void displayTeams() {
         for (Team team : teams ){  //Team Datatypen gir vi navn og instanser den 'team' printer vi fra 'teams' array.  AKA Team(Datatype) team(var navn) : (for) teams(ArrayList navn)
             System.out.println(team); //print team
         }
     }
-
     private static Team registerTeam(String teamName,String[] teammembers) { //
             Team newTeam = new Team(teamName, teammembers);
            // System.out.println(newTeam); // Sout nyeste team
             teams.add(newTeam); //Tilføjer team til vores main team arraylist.
            return newTeam;
-
-
     }
     private static int scheduleMatch(LocalDateTime date) {
      m.SetTime(date);
