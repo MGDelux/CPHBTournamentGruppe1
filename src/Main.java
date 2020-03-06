@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
      private static ArrayList<Team> teams = new ArrayList<Team>();
      private static ArrayList<Match> matches= new ArrayList<Match>();
-     private static  Match m = new Match();
+
 
     public static void main(String[] args) {
         String teamName = "Golden memers"; // FAKE UI INPUT
@@ -42,9 +42,10 @@ public class Main {
            return newTeam;
     }
     private static int scheduleMatch(LocalDateTime date) {
-     m.SetTime(date);
-     matches.add(m);
-     return m.getId();
+        Match m = new Match();
+         m.SetTime(date);
+         matches.add(m);
+        return m.getId();
 }
     private static Match getMatchById(int matchId){
         Match foundMatch = null;
