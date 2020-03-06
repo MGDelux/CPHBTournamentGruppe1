@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
      private static ArrayList<Team> teams = new ArrayList<Team>();
      private static ArrayList<Match> matches= new ArrayList<Match>();
-
+// FIX FOR EMIL PogU
 
     public static void main(String[] args) {
         String teamName = "Golden memers"; // FAKE UI INPUT
