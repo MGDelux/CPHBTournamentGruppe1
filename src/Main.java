@@ -20,7 +20,8 @@ public class Main {
         Team team2 = registerTeam(teamName2,teamMembers2);
         displayTeams();
         int match1 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
-        m.setTeam(team1,team2);
+        getMatchById(match1).setTeam(team1,team2);
+
     }
 
     private static void displayTeams() {
