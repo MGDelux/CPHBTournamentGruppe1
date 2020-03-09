@@ -13,7 +13,6 @@ public class Team {
     String defender;
     public Team(String teamName, String[] memberNames){
         this.id = nextId;
-
         this.name = teamName;
         nextId++;
         //attacker = players[0];
@@ -26,8 +25,6 @@ public class Team {
         }
 
     }
-
-
     protected void addPlayer(String name){
         Player p = new Player(name);
         players.add(p);

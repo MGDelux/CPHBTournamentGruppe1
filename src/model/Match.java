@@ -44,14 +44,18 @@ public class Match {
 
 }
 public Team setResult(int team1Score, int team2Score){
+        Team winnerteam;
+        this.score[0] = team1Score;
+        this.score[1] = team1Score;
         if (team1Score > team2Score){
             this.score[0] = this.score[0]+ 3;
-            return  team1;
+            winnerteam =  team1;
         }
         else {
             this.score[1] = this.score[1] + 3;
-            return team2;
+            winnerteam = team2;
         }
+        return  winnerteam;
 
 }
 public  static  void  setScore(){
