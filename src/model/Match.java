@@ -28,18 +28,17 @@ public class Match {
     public String toString() {
         if (this.team1 != null && this.team2 != null) {
             String str =" ";
-            return "Match{" +
-                "team1=" + team1 +
-                ", team2=" + team2 +
-                ", result='" + result + '\'' +
-                ", type='" + type + '\'' +
-                ", time=" + time +
-                ", id=" + id +
-                ", score=" + Arrays.toString(score) +
-                ", str='" + str + '\'' +
-                '}';
+            return "Kamp : \t" +
+                    " Spil ID :" + id +
+                " Hold #1 " + team1.getName() +
+                ", VS Hold #2 " + team2.getName() +
+                ", Spil resultat:'" + result + '\'' +
+                ", type idk'" + type + '\'' +
+                ", Tid: KL:" + time.getHour() +":"+time.getMinute()+
+                ", Score: " + this.score[0] + " - " + this.score[1]+
+                ' ';
     }
-        String str = "Error";
+        String str = "Error in team display POGGGERS";
         return str;
 
 }

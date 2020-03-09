@@ -12,7 +12,7 @@ public class Main {
       //  Team team1 = new Team("Golden Eagles", new String[]{"Ali", "Mathias"});
         //System.out.println(team1);
         String teamName = "Golden memers"; // FAKE UI INPUT
-        String[] teamMembers = {"Ali","Mathias"}; // FAKE UI INPUT
+        String[] teamMembers = {"Robert","Mathias"}; // FAKE UI INPUT
         String teamName2 = "EZPZ";
         String[] teamMembers2 ={"Emil","Janus"};
         String teamName3 = "Team 3 Gang";
@@ -23,8 +23,8 @@ public class Main {
         String[] teamMembers5= {"Mads","Emil"};
         String teamName6 = "DTU";
         String[] teamMembers6= {"Jane","Karl"};
-        String teamName7 = "Corona-virus";
-        String[] teamMembers7= {"Sara","Clara"};
+        String teamName7 = "Corona-virus is fucking lit";
+        String[] teamMembers7= {"Ali","Mathias"};
         String teamName8 = "KU";
         String[] teamMembers8= {"Mom","Pops"};
         Team team1 = registerTeam(teamName,teamMembers);
@@ -40,18 +40,23 @@ public class Main {
         int match2 = scheduleMatch(LocalDateTime.of(2020,06,6,13,0));
         int match3 = scheduleMatch(LocalDateTime.of(2020,06,6,14,0));
         int match4 = scheduleMatch(LocalDateTime.of(2020,06,6,15,0));
-        int semif1 = scheduleMatch(LocalDateTime.of(2020,06,6,16,0));
-        int semif2 = scheduleMatch(LocalDateTime.of(2020,06,6,17,0));
-        int finalen = scheduleMatch(LocalDateTime.of(2020,06,6,18,0));
         updateMatch(match1,team1,team2);
         updateMatch(match2,team3,team4);
         updateMatch(match3,team5,team6);
         updateMatch(match4,team7,team8);
+
+
+        // System.out.println(getMatchById(match1)); // for testing owo
+        registerResult(match1,4,10);
+        registerResult(match2,8,5);
+        registerResult(match3,5,1);
+        registerResult(match4,4,4);
         displayTeams();
 
         displayMatches();
-        System.out.println(getMatchById(match1)); // for testing
-        registerResult(match1,4,10);
+
+
+
 
     }
     private static void updateMatch(int m,Team team1,Team team2) {
