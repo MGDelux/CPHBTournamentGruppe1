@@ -8,7 +8,9 @@ public class Match {
     private String result, type;
     private LocalDateTime time;
     private int id;
-    private int[] score;
+    private int[] score = {0,0};
+   // private int team1Score;
+   // private int team2Score;
     private static int nextId = 0;
 
     public Match() {
@@ -23,23 +25,36 @@ public class Match {
     }
 
     @Override
-    public String toString() { // SKAL FORMATERES og fixes lol
+    public String toString() {
         if (this.team1 != null && this.team2 != null) {
+            String str =" ";
             return "Match{" +
-                    ", Match id#" + id +
-                    " team1: " + team1 +
-                    ", vs team2: " + team2 +
-                    ", result= '" + result + '\'' +
-                    ", type=' " + type + '\'' +
-                    ", time= " + time +
-
-                    ", score= " + Arrays.toString(score) +
-                    '}';
-
-
+                "team1=" + team1 +
+                ", team2=" + team2 +
+                ", result='" + result + '\'' +
+                ", type='" + type + '\'' +
+                ", time=" + time +
+                ", id=" + id +
+                ", score=" + Arrays.toString(score) +
+                ", str='" + str + '\'' +
+                '}';
     }
         String str = "Error";
         return str;
+
+}
+public Team setResult(int team1Score, int team2Score){
+        if (team1Score > team2Score){
+            this.score[0] = this.score[0]+ 3;
+            return  team1;
+        }
+        else {
+            this.score[1] = this.score[1] + 3;
+            return team2;
+        }
+
+}
+public  static  void  setScore(){
 
 }
     public void setTeam(Team team1, Team team2){
@@ -66,11 +81,8 @@ public class Match {
         return id;
     }
 
-    public int[] getScore() {
-        return score;
-    }
 
-  public int returnId(){
+    public int returnId(){
         return id;
 }
     public void setTeam1(Team team1) {
@@ -93,9 +105,11 @@ public class Match {
         this.id = id;
     }
 
+    public int[] getScore() {
+        return score;
+    }
+
     public void setScore(int[] score) {
         this.score = score;
     }
-
-
 }

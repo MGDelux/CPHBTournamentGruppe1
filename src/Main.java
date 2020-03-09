@@ -6,14 +6,13 @@ import java.util.ArrayList;
 public class Main {
      private static ArrayList<Team> teams = new ArrayList<Team>();
      private static ArrayList<Match> matches= new ArrayList<Match>();
-// test push
-//test push2
+
     public static void main(String[] args) {
         String teamName = "Golden memers"; // FAKE UI INPUT
         String[] teamMembers = {"Ali","Mathias"}; // FAKE UI INPUT
         String teamName2 = "EZPZ";
         String[] teamMembers2 ={"Emil","Janus"};
-        String teamName3 = "Team 3 Gang";
+        String teamName3 = "CORONA Gang";
         String[] teamMember3={"Tess","Thor"};
         String teamName4 = "IJ ER S!ck";
         String[] teamMembers4= {"Jens","Mqens"};
@@ -31,6 +30,8 @@ public class Main {
         int semif2 = scheduleMatch(LocalDateTime.of(2020,06,6,12,0));
         updateMatch(match1,team1,team2);
         System.out.println(getMatchById(match1)); // for testing
+        registerResult(match1,4,10);
+
     }
     private static void updateMatch(int m,Team team1,Team team2) {
         Match match = getMatchById(m);
@@ -62,6 +63,16 @@ public class Main {
             }
         }
         return  foundMatch;
+    }
+    private static Team registerResult(int id, int team1Score, int team2Score){
+        Match match = getMatchById(id);
+            Team teamWinner = match.setResult(team1Score,team2Score);
+        return teamWinner;
+    }
+    private static  void displayMatches(){
+        for (Match match : matches ) // Samme som display teams
+            System.out.println(match); //print match
+
     }
 
 }
