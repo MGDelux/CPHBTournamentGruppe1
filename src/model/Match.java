@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Match {
@@ -26,18 +27,22 @@ public class Match {
 
     @Override
     public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         if (this.team1 != null && this.team2 != null) {
             String str =" ";
             return "Kamp : \t" +
-                    " Spil ID :" + id +
+                    " Tid: KL:" + time.format(formatter)+
+                    ", Spil ID :" + id +
                 " Hold #1 " + team1.getName() +
                 ", VS Hold #2 " + team2.getName() +
                 ", Spil resultat:'" + result + '\'' +
                 ", type idk'" + type + '\'' +
-                ", Tid: KL:" + time.getHour() +":"+time.getMinute()+
                 ", Score: " + this.score[0] + " - " + this.score[1]+
                 ' ';
     }
+        else {
+
+        }
         String str = "Error in team display POGGGERS";
         return str;
 
