@@ -7,7 +7,7 @@ public class Main {
      private static ArrayList<Team> teams = new ArrayList<Team>();
      private static ArrayList<Match> matches= new ArrayList<Match>();
 // test push
-
+//test push2
     public static void main(String[] args) {
         String teamName = "Golden memers"; // FAKE UI INPUT
         String[] teamMembers = {"Ali","Mathias"}; // FAKE UI INPUT
