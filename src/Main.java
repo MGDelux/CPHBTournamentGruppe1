@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public class Main {
      private static ArrayList<Team> teams = new ArrayList<Team>();
      private static ArrayList<Match> matches= new ArrayList<Match>();
-// FIX FOR EMIL PogU
+// test push
 
     public static void main(String[] args) {
         String teamName = "Golden memers"; // FAKE UI INPUT
         String[] teamMembers = {"Ali","Mathias"}; // FAKE UI INPUT
         String teamName2 = "EZPZ";
         String[] teamMembers2 ={"Emil","Janus"};
-        String teamName3 = "Ali er gud";
+        String teamName3 = "Team 3 Gang";
         String[] teamMember3={"Tess","Thor"};
         String teamName4 = "IJ ER S!ck";
         String[] teamMembers4= {"Jens","Mqens"};
