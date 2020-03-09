@@ -6,7 +6,7 @@ public class Team {
     private String name;
     private int id, matchCount, score;
     private static int nextId;
-    private int [] points;
+    private int [] points = new int[10];
     private String position;
     private ArrayList<Player> players = new ArrayList<Player>();
     String attacker;
@@ -61,5 +61,13 @@ public class Team {
 
     public String getPosition() {
         return position;
+    }
+
+    public void addPoints(int i) {
+    }
+
+    public void addScore(int team1Score) {
+        matchCount++;
+        this.points[matchCount]=1;
     }
 }

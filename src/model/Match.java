@@ -48,13 +48,15 @@ public Team setResult(int team1Score, int team2Score){
         this.score[0] = team1Score;
         this.score[1] = team1Score;
         if (team1Score > team2Score){
-            this.score[0] = this.score[0]+ 3;
-            winnerteam =  team1;
+            winnerteam = team1;
+            team1.addPoints(3);
         }
         else {
-            this.score[1] = this.score[1] + 3;
+               team2.addPoints(3);
             winnerteam = team2;
         }
+        team1.addScore(team1Score-team2Score);
+        team2.addScore(team2Score-team1Score);
         return  winnerteam;
 
 }
