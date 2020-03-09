@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Team {
     private String name;
-    private int id, matchCount, score;
+    private int id, matchCount = 0, score;
     private static int nextId;
     private int [] points = new int[10];
     private String position;
@@ -64,10 +64,12 @@ public class Team {
     }
 
     public void addPoints(int i) {
+        this.points[matchCount]=i;
+        matchCount++;
     }
 
-    public void addScore(int team1Score) {
-        matchCount++;
-        this.points[matchCount]=1;
+    public void addScore(int Score) {
+        this.score +=score;
+
     }
 }
