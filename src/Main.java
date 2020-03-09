@@ -44,15 +44,13 @@ public class Main {
         updateMatch(match2,team3,team4);
         updateMatch(match3,team5,team6);
         updateMatch(match4,team7,team8);
-
-
         // System.out.println(getMatchById(match1)); // for testing owo
-        registerResult(match1,4,10);
-        registerResult(match2,8,5);
-        registerResult(match3,5,1);
-        registerResult(match4,4,4);
-        displayTeams();
+       Team winner = registerResult(match1,4,10);
+        Team winner1 = registerResult(match2,8,5);
+        Team winner2 =  registerResult(match3,5,1);
+        Team winner3 = registerResult(match4,4,4);
 
+        displayTeams();
         displayMatches();
 
 
@@ -64,6 +62,8 @@ public class Main {
         match.setTeam(team1,team2);
     }
     private static void displayTeams() {
+        System.out.println("\t**** TEAMS ****");
+
         for (Team team : teams ){  //Team Datatypen gir vi navn og instanser den 'team' printer vi fra 'teams' array.  AKA Team(Datatype) team(var navn) : (for) teams(ArrayList navn)
             System.out.println(team); //print team
         }
@@ -96,6 +96,7 @@ public class Main {
         return teamWinner;
     }
     private static  void displayMatches(){
+        System.out.println("\t**** SCHEDULE ****");
         for (Match match : matches ) // Samme som display teams
             System.out.println(match); //print match
 
