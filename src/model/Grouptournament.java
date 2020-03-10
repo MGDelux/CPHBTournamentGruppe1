@@ -5,8 +5,7 @@ public class Grouptournament extends Tournament {
     public Grouptournament(String title) {
         super(title);
     }
-    public void Test(){
-        System.out.println("Groupmodel Tourny");
+    public void runTest(){
+        System.out.println("create group");
     }
-
 }
