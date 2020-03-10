@@ -8,6 +8,7 @@ public class Tournament {
     private static ArrayList<Match> matches= new ArrayList<Match>();
     private String title;
     public void  runTest(){
+        System.out.println("\t**** "+title+" ****");
         //  Team team1 = new Team("Golden Eagles", new String[]{"Ali", "Mathias"});
         //System.out.println(team1);
         String teamName = "Golden memers"; // FAKE UI INPUT

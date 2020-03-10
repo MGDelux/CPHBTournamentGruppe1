@@ -1,6 +1,4 @@
-import model.Match;
-import model.Team;
-import model.Tournament;
+import model.*;
 
 import java.util.ArrayList;
 
@@ -11,8 +9,14 @@ public class Main {
     public static void main(String[] args) {
         Tournament tournament = new Tournament("CPH CUP");
         tournament.runTest();
+        Knockouttournament KnockOutTournament = new Knockouttournament("KO TOUR");
+        KnockOutTournament.showDescrition();
+        Grouptournament GroupT = new Grouptournament("Group Tour");
+        GroupT.Test();
 
-    }
+
+
+        }
 
 
 }
